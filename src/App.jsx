@@ -1,10 +1,12 @@
+import PraimaryButton from "./components/atoms/PraimaryButton";
+import SecondaryButton from "./components/atoms/SecondaryButton";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <PraimaryButton>テスト</PraimaryButton>
+      <SecondaryButton>検索</SecondaryButton>
     </div>
   );
 }
