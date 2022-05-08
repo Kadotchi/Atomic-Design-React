@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { Input } from "../atoms/input/Input";
-import PraimaryButton from "../atoms/PraimaryButton";
+import PraimaryButton from "../atoms/button/PraimaryButton";
 
 export const SearchInput = () => {
   return (

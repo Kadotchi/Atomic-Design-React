@@ -1,5 +1,5 @@
-import PraimaryButton from "./components/atoms/PraimaryButton";
-import SecondaryButton from "./components/atoms/SecondaryButton";
+import PraimaryButton from "./components/atoms/button/PraimaryButton";
+import SecondaryButton from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecules/SearchInput";
 import "./styles.css";
 
