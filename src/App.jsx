@@ -8,10 +8,10 @@ export default function App() {
   const user = {
     name: "かどっち",
     image: "https://source.unsplash.com/73pyV0JJOmE",
-    mail: "1111@aaa.com",
+    mail: "1111aaaaaaaaa@aaa.com",
     phone: "000-9999-8888",
     company: {
-      name: "ああああ株式会社"
+      name: "ああああfdagdsagda株式会社"
     },
     website: "httt.com"
   };
