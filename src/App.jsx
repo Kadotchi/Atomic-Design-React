@@ -1,7 +1,10 @@
+import { BrowserRouter } from "react-router-dom";
 import PraimaryButton from "./components/atoms/button/PraimaryButton";
 import SecondaryButton from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/ouganisms/user/UserCard";
+import { DefaultLayout } from "./components/templates/DefaultLayout";
+import { HeaderOnry } from "./components/templates/HeaderOnry";
 import "./styles.css";
 
 export default function App() {
@@ -16,12 +19,14 @@ export default function App() {
     website: "httt.com"
   };
   return (
-    <div className="App">
-      <PraimaryButton>テスト</PraimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <br />
-      <SearchInput />
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <DefaultLayout className="App">
+        <PraimaryButton>テスト</PraimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <br />
+        <SearchInput />
+        <UserCard user={user} />
+      </DefaultLayout>
+    </BrowserRouter>
   );
 }
