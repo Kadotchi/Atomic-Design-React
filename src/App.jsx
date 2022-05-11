@@ -4,7 +4,6 @@ import SecondaryButton from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/ouganisms/user/UserCard";
 import { DefaultLayout } from "./components/templates/DefaultLayout";
-import { HeaderOnry } from "./components/templates/HeaderOnry";
 import "./styles.css";
 
 export default function App() {
