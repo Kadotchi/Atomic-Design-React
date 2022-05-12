@@ -1,18 +1,26 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Top } from "../components/pages/Top";
 import { Users } from "../components/pages/Users";
+import { DefaultLayout } from "../components/templates/DefaultLayout";
+import { HeaderOnry } from "../components/templates/HeaderOnry";
 
-export const Router = () => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Top />
+          <DefaultLayout>
+            <Top />
+          </DefaultLayout>
         </Route>
         <Route path="/users">
-          <Users />
+          <HeaderOnry>
+            <Users />
+          </HeaderOnry>
         </Route>
       </Switch>
     </BrowserRouter>
   );
 };
+
+export default Router;
