@@ -1,21 +1,25 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../ouganisms/user/UserCard";
 
+const users = [...Array(10).keys()].map((val) => {
+  return {
+    id: val,
+    name: `かどっち${val}`,
+    image: "https://source.unsplash.com/73pyV0JJOmE",
+    mail: "1111aaaaaaaaa@aaa.com",
+    phone: "000-9999-8888",
+    company: {
+      name: "ああああfdagdsagda株式会社"
+    },
+    website: "httt.com"
+  };
+});
 export const Users = () => {
-  const users = [...Array(10).keys()].map((val) => {
-    return {
-      id: val,
-      name: `かどっち${val}`,
-      image: "https://source.unsplash.com/73pyV0JJOmE",
-      mail: "1111aaaaaaaaa@aaa.com",
-      phone: "000-9999-8888",
-      company: {
-        name: "ああああfdagdsagda株式会社"
-      },
-      website: "httt.com"
-    };
-  });
+  const { state } = useLocation();
+  const isAdmin = state ? state.isAdmin : false;
 
   return (
     <SContainer>
@@ -23,7 +27,7 @@ export const Users = () => {
         <h2>ユーザー一覧</h2>
         <SearchInput />
         {users.map((user) => (
-          <UserCard key={user.id} user={user} />
+          <UserCard key={user.id} user={user} isAdmin={isAdmin} />
         ))}
       </SUserArea>
     </SContainer>
