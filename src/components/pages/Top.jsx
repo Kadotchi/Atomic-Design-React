@@ -7,6 +7,7 @@ import { UserContext } from "../providers/UserProviders";
 
 export const Top = () => {
   const history = useHistory();
+  console.log(UserContext);
   const { setUserInfo } = useContext(UserContext);
 
   const onClickAdmin = () => {
